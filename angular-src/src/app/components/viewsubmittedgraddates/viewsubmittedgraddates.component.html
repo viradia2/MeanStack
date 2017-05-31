@@ -1,0 +1,29 @@
+<h3 class="page-header">View Submitted Graduation Dates</h3>
+<div *ngIf="userid">
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>County Name :</label> {{countyname}} </li>
+    <li class="list-group-item">
+      <label>Academic Year</label>
+      <select required [(ngModel)]="academicyear" name="academicyear" class="form-control">
+        <option *ngFor="let _year of listYear"  [ngValue]="_year">{{_year}}</option>
+      </select>
+    </li>
+  </ul>
+  <div style="text-align: center;">
+      <input style="font-size:18px; width:300px; text-transform: none;" type="submit" class="btn btn-primary" value="Get Data" (click) ="onGetData()" >
+  </div>
+</div>
+<br/>
+<br/>
+<div>
+<table *ngIf="getGraduationData" class="table" style="font-size:18px;">
+  <tr>
+    <th>School Name</th>
+    <th>Graduation Date</th>
+  </tr>
+  <tr *ngFor="let data of getGraduationData; let i=index">
+    <td>{{data.schoolname}} </td>
+    <td>{{data.graduationdate}}</td>
+  </tr>
+</table>
+</div>

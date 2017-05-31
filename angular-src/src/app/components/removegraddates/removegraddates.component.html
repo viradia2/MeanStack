@@ -1,0 +1,19 @@
+<h3 class="page-header">Remove Graduation Date</h3>
+<div> <!-- *ngIf="userid" -->
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>County Name :</label> {{countyname}} </li>
+    <li class="list-group-item">
+      <label>School Name</label>
+      <select [(ngModel)]="schoolname" name="schoolname" class="form-control">
+        <option *ngFor="let _school of activeschool"  [ngValue]="_school">{{_school}}</option>
+      </select>
+    </li>
+    <li class="list-group-item">
+      <label>Academic Year</label>
+      <select [(ngModel)]="academicyear" name="academicyear" class="form-control">
+        <option *ngFor="let _year of activeYears"  [ngValue]="_year">{{_year}}</option>
+      </select>
+    </li>
+  </ul>
+  <input style="font-size:18px; width:300px; float: right; text-transform: none;" type="submit" class="btn btn-primary" value="Submit" (click) ="onDeleteGraduationDate()" >
+</div>

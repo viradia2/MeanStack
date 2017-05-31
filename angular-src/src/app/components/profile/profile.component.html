@@ -1,0 +1,13 @@
+<!-- <app-navbar></app-navbar> -->
+<div *ngIf="userid">
+  <h3 class="page-header">Profile</h3>
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>User Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label> {{userid}} </li>
+    <li class="list-group-item"><label>First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label> {{firstname}} </li>
+    <li class="list-group-item"><label>Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label> {{lastname}} </li>
+    <li class="list-group-item"><label>County Name &nbsp; :</label> {{countyname}} </li>
+    <li class="list-group-item"><label>Is Admin? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label> {{isadmin}} </li>
+  </ul>
+  <input style="font-size:18px; width:300px; text-transform: none;" type="submit" class="btn btn-primary" value="Change Password" [routerLink] ="['/profile/changepassword']" >
+  &nbsp;&nbsp;&nbsp; <input style="font-size:18px; width:300px; text-transform: none;" type="submit" class="btn btn-primary" value="Update Profile" [routerLink] ="['/profile/updateprofile']" >
+</div>

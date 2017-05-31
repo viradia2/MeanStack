@@ -1,0 +1,50 @@
+
+While deploying on local system (Host: Local System, Database: Local System):
+----------------------------------------------------------------------------
+
+Change database.js (Set database URL and password).
+
+Change auth.service.ts (Add "http://localhost:3000/" before all the backend URLs).
+
+Change app.js (Set proper port number (3000)).
+
+Change login.js (Remove authentication in URL: login/addlogin).
+
+Deploy the application locally.
+
+In the database: Import the schools collection: Run following command via cmd (Path: C:\Program Files\MongoDB\Server\3.4\bin):
+mongoimport --db onlinereportingtooldb --collection schools --drop --file "<FilePath>\schools.json"
+
+Set one admin account in the application:
+In the database: Add one admin usersinfo in the database through cmd via query: db.usersinfo.insert({userid : "<userid>", isadmin : "Y", countyname : "AllCounties", firstname : "<firstname>", lastname : "<lastname>"})
+In the database: Add one admin login detail in the database through the Postman via URL: "localhost:3000/login/addlogin"
+
+Change login.js (Add authentication in URL: login/addlogin).
+
+Deploy the application locally again.
+
+==================================================================================
+
+While deploying on Heroku (Host: Heroku, Database: mLab):
+--------------------------------------------------------
+
+Change database.js (Set database URL and password).
+
+Change auth.service.ts (Remove "http://localhost:3000/" before all the backend URLs).
+
+Change app.js (Set proper port number).
+
+Change login.js (Remove authentication in URL: login/addlogin).
+
+Deploy the application on Heroku.
+
+In the mLab database: Import the schools collection: Run following command via cmd (Path: C:\Program Files\MongoDB\Server\3.4\bin):
+mongoimport -h <mLab URL> -d onlinereportingtooldb -c schools -u <dbuser> -p <password> --file "<FilePath>\schools.json"
+
+Set one admin account in the application:
+In the mLab database: Add one admin usersinfo in the database through mLab interface: insert following document in the usersinfo collection: ({userid : "john.smith2@xyz.com", isadmin : "Y", countyname : "AllCounties", firstname : "John", lastname : "Smith"})
+In the mLab database: Add one admin login detail in the database through the Postman via URL: "<Heroku application URL>/login/addlogin"
+
+Change login.js (Add authentication in URL: login/addlogin).
+
+Deploy the application on Heroku again.

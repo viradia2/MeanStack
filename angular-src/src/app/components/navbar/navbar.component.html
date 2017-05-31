@@ -1,0 +1,14 @@
+<img style="max-width:200px; float: left; margin-top: -28px;" src="../../../assets/images/LogoWVDE.jpg" />
+<h2 style="font-family:Helvetica; text-align:center; padding-right: 180px;">Online Reporting Tool</h2>
+
+<nav *ngIf="authService.loggedIn()" class="navbar navbar-default" style="">
+  <div id="navbar" class="collapse navbar-collapse">
+   <ul *ngIf="authService.loggedIn()" class="nav navbar-nav navbar-left">
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" ><a style="font-size: 23px; text-transform: none; cursor: pointer;" class="color-me" (click)="onDashboardClick()">Dashboard</a></li>
+   </ul>
+   <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" ><a style="font-size: 23px; text-transform: none;" class="color-me" [routerLink] ="['/profile']">Profile</a></li>
+      <li *ngIf="authService.loggedIn()"><a  style="font-size: 23px; text-transform: none;" class="color-me" (click)="onLogoutClick()" href="#">Logout</a></li>
+   </ul>
+  </div>
+</nav>

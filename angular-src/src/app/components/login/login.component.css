@@ -1,0 +1,63 @@
+
+[role="login"] .container {
+	margin-top: 10px
+}
+[role="login"] .btn-success {
+	background: #76B831;
+	border: 1px solid #679F2C;
+	float: right
+}
+[role="login"] label {
+	font-weight: normal;
+	color: black;
+}
+.panel-heading {
+	padding: 5px 15px;
+}
+.form-inline {
+	margin: 5px
+}
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
+	margin: 5px
+}
+.profile-img {
+	width: 350px;
+	display: block;
+}
+.panel-default {
+    opacity: .9;
+    -webkit-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
+    box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45);
+    background: transparent url('http://3rwebtech.com/bg-white.png') repeat scroll 0% 0%;
+}
+.tooltip {
+		text-align: right;
+	  color: blue;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

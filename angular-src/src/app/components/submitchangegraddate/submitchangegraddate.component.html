@@ -1,0 +1,21 @@
+<h3 class="page-header">Submit/Change Graduation Dates</h3>
+<div> <!-- *ngIf="userid" -->
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>County Name :</label> {{countyname}} </li>
+    <li class="list-group-item">
+      <label>School Name</label>
+      <select required [(ngModel)]="schoolname" name="schoolname" class="form-control">
+        <option *ngFor="let _school of activeschool"  [ngValue]="_school">{{_school}}</option>
+      </select>
+    </li>
+    <li class="list-group-item">
+      <label>Academic Year</label>
+      <select required [(ngModel)]="academicyear" name="academicyear" class="form-control">
+        <option *ngFor="let _year of activeYears"  [ngValue]="_year">{{_year}}</option>
+      </select>
+    </li>
+    <li class="list-group-item"><label>Graduation Date :</label>
+      <input type="date" required [(ngModel)]="graduationdate" name="graduationdate"></li>
+    </ul>
+    <input type="submit" style="font-size:18px; width:300px; float: right; text-transform: none;" class="btn btn-primary" value="Submit" (click) ="onSubmitChanges()" >
+</div>

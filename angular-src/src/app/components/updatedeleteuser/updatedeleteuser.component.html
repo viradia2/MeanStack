@@ -1,0 +1,47 @@
+<!-- <app-navbar></app-navbar> -->
+<a [routerLink] ="['/dashboard/manageuser']" class="btn btn-default" style="font-size:15px; text-transform: none;">Back to Manage Users</a>
+<br/>
+<br/>
+<h3 class="page-header">Update/Delete Users</h3>
+<div>
+  <div style="position:fixed; width:100%;
+    border-radius: 3px; background-color: white;
+    z-index: 999;  top: 30%;">
+    <popup  #popup1 (confirmClick)="YourConfirmEvent()">
+        Are you sure you want to delete User: {{uId}}?
+    </popup>
+  </div>
+</div>
+<table class="table" style="font-size:18px;">
+  <tr>
+    <th>User Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>County Name</th>
+    <th>Is Admin?</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let item of _gusersObj; let i=index">
+    <td>{{item.userid}} </td>
+    <td><input class="form-control" type="text" [readonly]="!showName[i]" [(ngModel)]="_gusersObj[i].firstname" name="firstname" value=""></td>
+    <td><input class="form-control" type="text" [readonly]="!showName[i]" [(ngModel)]="_gusersObj[i].lastname" name="lastname" value=""></td>
+    <td>
+        <select class="form-control" [disabled]="!showName[i]" [(ngModel)]="_gusersObj[i].countyname" name="countyname" selected="">
+          <option *ngFor="let _county of listCounty"  [ngValue]="_county">{{_county}}</option>
+        </select>
+    </td>
+    <td>
+      <select class="form-control" [disabled]="!showName[i]" [(ngModel)]="_gusersObj[i].isadmin" name="isadmin" selected="">
+        <option  value="Y">Yes</option>
+        <option  value="N">No</option>
+      </select>
+    </td>
+    <td>
+      <input style="font-size:15px; text-transform: none;" type="submit" class="btn btn-primary" value="Update" (click)="enableUpdateFields(i)">
+    </td>
+    <td>
+      <input style="font-size:15px; text-transform: none;" type="submit" class="btn btn-danger" value="Delete" (click)="onDeleteUser(i)">
+    </td>
+  </tr>
+</table>

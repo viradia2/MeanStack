@@ -1,0 +1,39 @@
+<!-- <app-navbar></app-navbar> -->
+<a [routerLink] ="['/dashboard/manageuser']" class="btn btn-default" style="font-size:15px; text-transform: none;">Back to Manage Users</a>
+<br/>
+<br/>
+<h3 class="page-header">All Users Info</h3>
+
+
+<table class="table" style="font-size:18px;">
+  <tr>
+    <!-- <th>Userid</th>
+    <th>FirstName</th>
+    <th>LastName</th> -->
+    <th>County Name</th>
+    <th colspan="2"></th>
+  </tr>
+  <tr *ngFor="let data of _gallData; let i=index">
+    <td>{{data.countyname}}</td>
+    <td colspan="2">
+      <table class="table" style="font-size:18px;">
+        <tr>
+          <th>User Id</th>
+          <th style="text-align:right;">First Name</th>
+          <th style="text-align:right;">Last Name</th>
+        </tr>
+        <tr *ngFor="let schools of data.schools; let i=index">
+          <td>{{schools.userid}}</td>
+          <td style="text-align:right;">{{schools.firstname}}</td>
+          <td style="text-align:right;">{{schools.lastname}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- <tr *ngFor="let item of _gusersObj; let i=index">
+    <td>{{item.userid}} </td>
+    <td>{{item.firstname}}</td>
+    <td>{{item.lastname}}</td>
+    <td>{{item.countyname}}</td>
+  </tr> -->
+</table>

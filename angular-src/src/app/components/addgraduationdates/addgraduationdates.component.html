@@ -1,0 +1,17 @@
+<!-- <app-navbar2></app-navbar2> -->
+<div *ngIf="userid" style="padding-top: 0px;">
+  <h3 class="page-header">Welcome {{firstname}}</h3>
+</div>
+<div style="text-align:center; padding-top: 0px;">
+  <a style="padding: 20px 57px; font-size: 18px; text-transform: none;" [routerLink] ="['/addgraduationinfo/viewallschoolatcounty']" class="btn btn-default" >View All Schools at the County</a>
+</div>
+<div style="text-align:center; padding-top: 0px;">
+  <br><a style="padding: 20px 46px; font-size: 18px; text-transform: none;" [routerLink] ="['/addgraduationinfo/viewsubmittedgraddates']" class="btn btn-default">View Submitted Graduation Dates</a>
+</div>
+<div style="text-align:center; padding-top: 0px;">
+  <br><a style="padding: 20px 47px; font-size: 18px; text-transform: none;" [routerLink] ="['/addgraduationinfo/submitchangegraddate']" class="btn btn-default">Submit/Change Graduation Dates</a>
+</div>
+<div style="text-align:center; padding-top: 0px;">
+  <br><a style="padding: 20px 78px; font-size: 18px; text-transform: none;" [routerLink] ="['/addgraduationinfo/removegraddates']" class="btn btn-default">Remove Graduation Dates</a>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,24 @@
+<a [routerLink] ="['/dashboard/report']" class="btn btn-default" style="font-size:15px; text-transform: none;">Back to Reports</a>
+
+<h3 class="page-header">Report 1: Schools With No Graduation Dates, Sorted by County Name</h3>
+<ul class="list-group" style="font-size:18px;">
+  <li class="list-group-item">
+    <label>Academic Year</label>
+    <select required [(ngModel)]="academicyear" name="academicyear" class="form-control">
+      <option *ngFor="let _year of listYear"  [ngValue]="_year">{{_year}}</option>
+    </select>
+  </li>
+</ul>
+<div style="text-align:center">
+  <input style="font-size:18px; width:300px; text-transform: none;" type="submit" class="btn btn-primary" value="Generate Report" (click) ="onGenerateReport()" >
+</div>
+<br/>
+<br/>
+
+<div *ngIf="g_county" id="pdf" class="" style="height: 100%">
+    <embed width="100%" height="1200px" id="pdffile" name="pdffile" [src]="loadPDF()" title="PDF File" >
+</div>
+
+<div>
+  <h3>&nbsp;</h3>
+</div>

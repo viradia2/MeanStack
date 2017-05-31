@@ -1,0 +1,28 @@
+
+MEAN stack application development references:
+---------------------------------------------
+https://www.youtube.com/watch?v=uONz0lEWft0&list=PLillGF-RfqbZMNtaOXJQiDebNXjVapWPZ
+
+Javascript - PDF references:
+---------------------------
+jsPDF:
+https://github.com/MrRio/jsPDF
+
+jsPDF-AutoTable:
+https://github.com/simonbengtsson/jsPDF-AutoTable
+https://simonbengtsson.github.io/jsPDF-AutoTable
+https://github.com/simonbengtsson/jsPDF-AutoTable/blob/master/examples/examples.js
+
+html2canvas:
+https://www.npmjs.com/package/html2canvas
+
+Image-into-base64 conversion - references:
+-----------------------------------------
+http://dopiaza.org/tools/datauri
+http://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript
+
+MongoDB, Mongoose references:
+----------------------------
+http://mongoosejs.com/docs/api.html
+http://mongoosejs.com/docs/queries.html
+https://docs.mongodb.com/manual/reference/operator/update/positional

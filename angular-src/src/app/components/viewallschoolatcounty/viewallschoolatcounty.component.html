@@ -1,0 +1,16 @@
+<h3 class="page-header">All Schools at County</h3>
+<div> <!-- *ngIf="userid" -->
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>County Name :</label> {{countyname}} </li>
+  </ul>
+</div>
+<table class="table" style="font-size:18px;">
+  <tr>
+    <th>School Name</th>
+    <th>Is Active?</th>
+  </tr>
+  <tr *ngFor="let data of gSchoolData; let i=index">
+    <td>{{data.schoolname}} </td>
+    <td>{{data.isactive}}</td>
+  </tr>
+</table>

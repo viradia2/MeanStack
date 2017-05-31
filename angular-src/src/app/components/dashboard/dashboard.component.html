@@ -1,0 +1,12 @@
+<div *ngIf="userid">
+  <h3 class="page-header">Welcome {{firstname}}</h3>
+</div>
+<div style="text-align:center; ">
+  <a style="padding: 20px 110px; font-size: 18px; text-transform: none;" [routerLink] ="['/dashboard/manageuser']" class="btn btn-default">Manage Users</a>
+  </div>
+<div style="text-align:center">
+  <br><a style="padding: 20px 100px; font-size: 18px; text-transform: none;" [routerLink] ="['/dashboard/manageschools']" class="btn btn-default">Manage Schools</a>
+</div>
+<div style="text-align:center">
+  <br><a style="padding: 20px 135px; font-size: 18px; text-transform: none;" [routerLink] ="['/dashboard/report']" class="btn btn-default">Reports</a>
+</div>

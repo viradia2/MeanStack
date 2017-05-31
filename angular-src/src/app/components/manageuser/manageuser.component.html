@@ -1,0 +1,15 @@
+<!-- <app-navbar></app-navbar> -->
+<h3 class="page-header">Manage Users</h3>
+<div style="text-align:center;">
+<a style="padding: 20px 103px; font-size: 18px; text-transform: none;" [routerLink] ="['/manageuser/getalluserinfo']" class="btn btn-default" >View All Users</a>
+</div>
+<div style="text-align:center">
+<br><a style="padding: 20px 105px; font-size: 18px; text-transform: none;" [routerLink] ="['/manageuser/adduserinfo']" class="btn btn-default">Add New User</a>
+</div>
+<div style="text-align:center">
+<br><a style="padding: 20px 79px; font-size: 18px; text-transform: none;" [routerLink] ="['/manageuser/updatedeleteuser']" class="btn btn-default">Update/Delete Users</a>
+</div>
+<div style="text-align:center">
+<br><a style="padding: 20px 29px; font-size: 18px; text-transform: none;" [routerLink] ="['/manageuser/changeotheruserpassword']" class="btn btn-default">Change Password of Other Users</a>
+</div>
+<router-outlet></router-outlet>

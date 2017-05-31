@@ -1,0 +1,19 @@
+<!-- <app-navbar></app-navbar> -->
+<a [routerLink] ="['/dashboard/manageschools']" class="btn btn-default" style="font-size:15px; text-transform: none;">Back to Manage Schools</a>
+
+
+<form (submit)="onUpdateCounty()">
+  <h3 class="page-header">Update County Name</h3>
+  <div class="form-group" style="font-size:18px;">
+    <label>County Name</label>
+    <select required [(ngModel)]="oldcountyname" name="oldcountyname" class="form-control">
+      <option id="countyname" *ngFor="let _county of listCounty"  [ngValue]="_county" >{{_county}}</option>
+    </select>
+  </div>
+
+  <div class="form-group" style="font-size:18px;">
+    <label>New County Name</label>
+    <input required type="text" [(ngModel)]="newcountyname" name="newcountyname" class="form-control" >
+  </div>
+  <input style="font-size:18px; width:300px; float: right; text-transform: none;" type="submit" class="btn btn-primary" value="Change County Name">
+</form>

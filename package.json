@@ -1,0 +1,22 @@
+{
+  "name": "OnlineReportingTool",
+  "version": "1.0.0",
+  "description": "Online Reporting Tool - WVDE",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies":{
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser":"*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Keval Sanghavi (keval.sanghavi@gmail.com), Vivek Viradia (vivek.viradia@gmail.com)",
+  "license": "ISC"
+}

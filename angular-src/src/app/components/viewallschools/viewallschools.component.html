@@ -1,0 +1,26 @@
+<a [routerLink] ="['/dashboard/manageschools']" class="btn btn-default" style="font-size:15px; text-transform: none;">Back to Manage Schools</a>
+<br/>
+<br/>
+<h3 class="page-header">All Schools Info</h3>
+<table class="table" style="font-size:18px;">
+  <tr>
+    <th>County Name</th>
+    <th colspan="2"></th>
+
+  </tr>
+  <tr *ngFor="let data of gallSchool; let i=index">
+    <td>{{data.countyname}}</td>
+    <td colspan="2">
+      <table class="table" style="font-size:18px;">
+        <tr>
+          <th>School Name</th>
+          <th style="text-align:right;">Is Active?</th>
+        </tr>
+        <tr *ngFor="let schools of data.schools; let i=index">
+          <td>{{schools.schoolsandisactivestatus}}</td>
+          <td style="text-align:right;">{{schools.isactive}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

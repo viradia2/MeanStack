@@ -1,0 +1,15 @@
+
+<!-- <app-navbar></app-navbar> -->
+<div *ngIf="userid">
+  <h3 class="page-header">Update Profile</h3>
+  <ul class="list-group" style="font-size:18px;">
+    <li class="list-group-item"><label>User Id : </label> {{userid}} </li>
+    <li class="list-group-item"><label>First Name</label>
+      <input required type="text" class="form-control" [(ngModel)]="firstname" name="firstname" value="{{firstname}}"> </li>
+    <li class="list-group-item"><label>Last Name</label>
+      <input required type="text" class="form-control" [(ngModel)]="lastname" name="lastname" value="{{lastname}}"> </li>
+    <li class="list-group-item"><label>County Name : </label> {{countyname}} </li>
+    <li class="list-group-item"><label>Is Admin? : </label> {{isadmin}} </li>
+  </ul>
+  <input type="submit" style="width:300px; float: right; font-size:18px; text-transform: none;" class="btn btn-primary" value="Update Profile" (click)="onUpdateProfile()" >
+</div>
