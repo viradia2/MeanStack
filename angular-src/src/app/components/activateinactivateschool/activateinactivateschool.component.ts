@@ -29,8 +29,11 @@ export class ActivateinactivateschoolComponent  {
   ) { }
 
   ngOnInit() {
+    //This Will be loaded with initialization of the webpage.
     this.showDropDown = true;
     var _listCounty=[];
+    
+    //Geeting All the County Names
     this.authService.getAllCountyName().subscribe(data => {
       if(data.success){
         for (var i = 0; i < data.countynames.length; i++) {
@@ -45,6 +48,7 @@ export class ActivateinactivateschoolComponent  {
     this.listCounty = _listCounty;
   }
 
+   //After selecting the County School Names will be shown according to the getallschoolatcounty method.
   onCountySelect(countyname){
     const schoolDetail = {
       countyname : this.countyname
@@ -65,6 +69,7 @@ export class ActivateinactivateschoolComponent  {
     this.schoollist = _schoolnames;
   }
 
+   //Inactivating School by clicking on InActivate from pop up box
   onInactivate(){
     const schoolDeatil = {
       countyname : this.countyname,
@@ -73,7 +78,8 @@ export class ActivateinactivateschoolComponent  {
 
     this.gCountyname = schoolDeatil.countyname;
     this.gSchoolname = schoolDeatil.schoolname;
-
+    
+    //Popup box for Inactivataion of School
     if("undefined" !== typeof schoolDeatil.countyname &&
        "undefined" !== typeof schoolDeatil.schoolname){
       this.popup1.options = {
@@ -97,7 +103,8 @@ export class ActivateinactivateschoolComponent  {
     }
 
   }
-
+  
+  //InActivating School
   inActivateSchool(){
     const schoolDeatils = {
       countyname : this.gCountyname,
@@ -127,6 +134,7 @@ export class ActivateinactivateschoolComponent  {
     }
   }
 
+  //Activating School
   onActivate(){
     const schoolDeatil = {
       countyname : this.countyname,
